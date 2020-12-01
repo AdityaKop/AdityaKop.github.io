@@ -1,0 +1,34 @@
+_timeline_projects = {
+  "id": "projects",
+  "title": "Projects",
+  "format": "timeline",
+  "items": [
+    {
+      "title": "Cinematcha",
+      "dates": "Jan 2018 - Mar 2018",
+      "description": [
+        "Built a movie recommendation engine on top of TheMovieDB, as a research project in search systems.",
+        "Researched algorithmic models for dynamic recommendation engines.",
+        "Increased ranking of a recommendation based on a variety of weighted factors (e.g. watch history, favorite genre, favorite films of users with similar tastes, the weather, the time of day, etc.).",
+        "Lowered the ranking of some films for users in certain geographic locations based on synopses and crises data."
+      ],
+      "link": {
+        "text": "View the code",
+        "url": "https://github.com/facillity/cinematcha"
+      }
+    },
+    {
+      "title": "Roboto or Notto",
+      "dates": "March 2017",
+      "description": [
+        "Created a game in which the user must decide if their opponent is a chatbot or not by the end of a 30 second round.",
+        "Generated chatbots from a pool of conversations mined from online forums.",
+        "Used English structural language analysis to select appropriate responses from a Markov Chain of possibilities."
+      ],
+      "link": {
+        "text": "View the code",
+        "url": "https://github.com/westaboo/MathematicaChatbot"
+      }
+    },
+  ]
+}
