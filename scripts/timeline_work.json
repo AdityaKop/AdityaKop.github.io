@@ -1,0 +1,25 @@
+_date = new Date();
+_this_month = Intl.DateTimeFormat('en', { month: 'short' }).format(_date);
+_this_year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(_date)
+_current_month = _this_month + " " + _this_year;
+
+_timeline_work = {
+  "id": "work",
+  "title": "Work",
+  "format": "timeline",
+  "items": [
+    {
+      "title": "Amazon",
+      "dates": "Mar 2019 - " + _current_month,
+      "link": {
+        "text": "View resume",
+        "url": "./resume.pdf"
+      }
+    },
+    {
+      "title": "Amazon",
+      "dates": "Jun 2018 - Sep 2018",
+      "description": "Internship on AWS."
+    },
+  ]
+}

@@ -1,12 +1,374 @@
-<!DOCTYPE html>
-<html>
+<title>Aditya Koppula</title>
+
 <head>
-  <title> Hello World! </title>
-<head>
+
+  <meta name = "viewport" content = "width=device-width, initial-scale=1">
+
+  <!-- BOOTSTRAP -->
+  <link rel = "stylesheet" type = "text/css" href = "includes/bootstrap/css/bootstrap.min.css">
+
+  <!-- CRITICAL CSS FOR MOBILE OPTIMIZATION -->
+
+  <style>
+    html, div.container {
+      font-family: sans-serif;
+    }
+
+    body {
+      margin: 0 0 0 0;
+    }
+
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+      padding-left: 5px;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 300 !important;
+      padding-left: 5px;
+    }
+
+    .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .blink {
+      animation: blink 1.5s infinite;
+    }
+
+    .bounceInDown {
+      -webkit-animation-name: bounceInDown;
+      animation-name: bounceInDown;
+    }
+
+    .cd-timeline-img.cd-picture {
+      background-color: #0a1d79 !important;
+    }
+
+    .cursor {
+      display: inline-block;
+      position: absolute;
+      margin: -3.5px auto auto -3px !important;
+    }
+
+    .direction {
+      text-align: left;
+    }
+
+    .fade {
+      -webkit-animation-name: fade;
+      animation-name: fade;
+    }
+
+    #intro {
+      height: 100vh;
+      background: rgb(35,63,177);
+      background: linear-gradient(0deg, rgba(35,63,177,1) 37%, rgba(148,233,231,1) 100%);
+      color: white;
+    }
+
+    .intro-link-container {
+      padding: 12px 10px !important;
+    }
+
+    .intro-link {
+      color: white;
+      font-size: 14px;
+      background: #0a1d79;
+      text-transform: uppercase;
+      border-radius: 5em;
+      width: 100%;
+      font-weight: bold;
+      padding: 15px 0;
+      box-shadow: 0px 0px 70px -10px rgba(0,0,0,0.25);
+      transition: .2s all;
+    }
+
+    .intro-title-typed {
+      margin: auto 0 50px;
+      display: inline-block;
+    }
+
+    .timeline-header {
+      color: #0a1d79;
+      font-weight: normal;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .zoomInUp {
+      -webkit-animation-name: zoomInUp;
+      animation-name: zoomInUp;
+    }
+
+    #bouncesDown {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 50em) {
+      .cursor {
+        display: none;
+      }
+      .intro-title-typed {
+        margin-bottom: 20px;
+      }
+    }
+
+    @-webkit-keyframes blink {
+      0% {
+        opacity: 0.0;
+      }
+      49% {
+        opacity: 0.0;
+      }
+      50% {
+        opacity: 1.0;
+      }
+      100% {
+        opacity: 1.0;
+      }
+    }
+
+    @-webkit-keyframes bounceInDown {
+      from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+      }
+
+      60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+      }
+
+      75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+      }
+
+      90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+      }
+
+      to {
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @keyframes bounceInDown {
+      from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+      }
+
+      60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+      }
+
+      75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+      }
+
+      90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+      }
+
+      to {
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes zoomInUp {
+      from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      }
+
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      }
+    }
+
+    @keyframes zoomInUp {
+      from {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+        transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+        animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+      }
+
+      60% {
+        opacity: 1;
+        -webkit-transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+        transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+        -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+      }
+    }
+  </style>
+
+</head>
+
+
+<!-- HERE COME'TH THE BEAST -->
 <body>
-  <h1> Goodbye World! </h1>
+  <div class = "container" style = "padding: 0; width: 100%;">
+
+  <!-- INTRODUCTION -->
+
+  <div id = "intro" class = "text-center">
+
+    <div id = "bouncesDown">
+      <div class = "animated bounceInDown">
+
+        <div id = "intro-name" class = "col-xs-12">
+          <h1>Aditya Koppula</h1>
+        </div>
+
+        <div class = "col-xs-12" style = "z-index: 2;">
+          <h2 class = "intro-title-typed">Software Engineer at Amazon AWS</h2>
+          <h2 class = "intro-title-typed blink cursor">|</h2>
+        </div>
+
+        <a href = "./resume.pdf">
+          <div class = "col-xs-5 col-xs-offset-1 col-md-2 col-md-offset-2 text-center intro-link-container">
+            <div class = "intro-link">
+              <i class = "fas fa-file-alt"></i><br>Resume
+            </div>
+          </div>
+        </a>
+
+        <a href = "#timeline">
+          <div class = "col-xs-5 col-xs-offset-0 col-md-2 col-md-offset-0 text-center intro-link-container">
+            <div class = "intro-link">
+              <i class = "fas fa-sitemap"></i><br>Portfolio
+            </div>
+          </div>
+        </a>
+
+        <a href = "https://www.linkedin.com/in/aditya-koppula/">
+          <div class = "col-xs-5 col-xs-offset-1 col-md-2 col-md-offset-0 text-center intro-link-container">
+            <div class = "intro-link">
+              <i class="fab fa-linkedin-in"></i><br>LinkedIn
+            </div>
+          </div>
+        </a>
+
+        <a href = "https://github.com/adityakop">
+          <div class = "col-xs-5 col-xs-offset-0 col-md-2 col-md-offset-0 text-center intro-link-container">
+            <div class = "intro-link">
+              <i class = "fab fa-github"></i><br>GitHub
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+    </div> <!-- end link row -->
+  </div> <!-- end intro -->
+
+  <!-- TEXT AFTER CODE -->
+
+  <div class = "statement-container animated fade col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+    <div id = "p-text" class = "statement code-color">
+      I am a software engineer with two years of industry experience
+      and interests in project management and technology consulting.
+      I am experienced with hybrid web application development and serverless
+      architecture.
+    </div>
+  </div>
+
+  <div class = "statement-link-container row animated fade">
+    <div class = "code-color statement-footer-text col-xs-12" style = "margin-bottom: 20px;"></div>
+  </div>
+
+  <!-- TIMELINE -->
+
+  <div id = "timeline">
+    <ul id = "timeline-links" class = "timeline-navbar text-center"></ul>
+    <div id = "cd-timeline"></div>
+  </div>
+
+  <!-- FOOTER -->
+
+  <section id = "end">
+
+    <div id = "contact-info" class = "text-center animated fade">
+      <div id = "p-text" class = "code-color">
+        Like what I do?<br>
+        <a href = "https://www.linkedin.com/in/aditya-koppula/">
+          <i class = "fab fa-linkedin-in" style = "background: #0c1d7b; color: white; border-radius: 100%; padding: 10px;"></i>
+          Let's connect!
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  </div>
 </body>
-<footer>
-  <h4> Created by Aditya Koppula, 2017 <br/> Special thanks to Zeeshan Hanif for telling me my website was shit. N-not that I appreciate his advice or anything. Baka! Check out his site <a href="https://westaboo.github.io">here</a> </h4>
-</footer>
-</html>
+
+<!-- CSS -->
+<link rel="stylesheet" type = "text/css" href="./includes/vertical-timeline/css/style.css">
+<link rel="stylesheet" type = "text/css" href="./main.css">
+<link rel="stylesheet" href = "https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+<!-- TIMELINE GENERATION -->
+<script src = "./scripts/timeline_work.json" charset = "UTF-8"></script>
+<script src = "./scripts/timeline_projects.json" charset = "UTF-8"></script>
+<script src = "./scripts/timeline.js" charset = "UTF-8"></script>
