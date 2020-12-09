@@ -66,14 +66,35 @@
     }
 
     #intro {
+      position: relative;
       height: 100vh;
-      background: rgb(35,63,177);
-      background: linear-gradient(0deg, rgba(35,63,177,1) 37%, rgba(148,233,231,1) 100%);
+      background: radial-gradient(circle at 50% -30%, #94e9e7, #233fb1);
       color: white;
+      z-index: 2;
+    }
+
+    #intro-bottom {
+      width: 100%;
+      height: 30%;
+      background-image: url(./images/intro-bottom.png);
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+      opacity: 0.25;
+      position: absolute;
+      bottom: 0;
+      z-index: -2;
+    }
+
+    #intro-bottom-blur {
+      backdrop-filter: brightness(0.4);
+      width: 100%;
+      height: 100%;
     }
 
     .intro-link-container {
       padding: 12px 10px !important;
+      position: relative;
+      z-index: 1;
     }
 
     .intro-link {
@@ -320,9 +341,14 @@
       </div>
 
     </div> <!-- end link row -->
+
+    <div id = "intro-bottom">
+      <div id = "intro-bottom-blur"></div>
+    </div>
+
   </div> <!-- end intro -->
 
-  <!-- TEXT AFTER CODE -->
+  <!-- STATEMENT -->
 
   <div class = "statement-container animated fade col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
     <div id = "p-text" class = "statement code-color">
