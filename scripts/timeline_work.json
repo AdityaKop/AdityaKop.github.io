@@ -11,6 +11,12 @@ _timeline_work = {
     {
       "title": "Amazon",
       "dates": "Mar 2019 - " + _current_month,
+      "description": [
+        "Worked in full-stack development on a native AWS serverless web application. Designed and developed our data pipeline and some key microservices.",
+        "Enabled rapid development of new features by owning the cleansing, transformation, and integration of new data from partner teams into our application datastore.",
+        "Owned the technical requirements definition, data sourcing, development, and ongoing support for a last-minute time-sensitive reporting requirement.",
+        "Coordinated efforts with partner teams to support the shift from a legacy system to our improved system as an input into a business-critical monthly process."
+      ],
       "link": {
         "text": "View resume",
         "url": "./resume.pdf"
@@ -19,7 +25,11 @@ _timeline_work = {
     {
       "title": "Amazon",
       "dates": "Jun 2018 - Sep 2018",
-      "description": "Internship on AWS."
+      "description": [
+        "Designed and developed a full-stack native AWS serverless web application.",
+        "Engaged in requirement refinement and design of architecture, data model, API, UI.",
+        "Produced a working proof of concept implementing the proposed architecture, which served as the basis for the architecture of later projects in the organization."
+      ]
     },
   ]
 }
